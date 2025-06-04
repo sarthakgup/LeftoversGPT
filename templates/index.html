@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>LeftoversGPT</title>
+    <style>
+        body { font-family: Arial; margin: 2rem; background: #f9f9f9; }
+        textarea, button { font-size: 16px; margin-top: 10px; }
+        pre { background: #eee; padding: 1rem; border-radius: 5px; white-space: pre-wrap; }
+    </style>
+</head>
+<body>
+    <h1>LeftoversGPT 🍳</h1>
+    <form method="POST">
+        <label for="ingredients">Enter leftover ingredients:</label><br>
+        <textarea name="ingredients" rows="4" cols="50" placeholder="e.g. rice, chicken, spinach"></textarea><br>
+        <button type="submit">Get Recipes</button>
+    </form>
+
+    {% if recipes %}
+        <h2>Meal Ideas:</h2>
+        <pre>{{ recipes }}</pre>
+    {% endif %}
+</body>
+</html>
